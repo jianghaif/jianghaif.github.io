@@ -15,16 +15,16 @@
 
 
 
-<meta name="description" content="有关节点的一些运用和一些代码示例">
+<meta name="description" content="一些节点的使用方法和例子">
 <meta property="og:type" content="article">
-<meta property="og:title" content="有关节点的一些运用和一些代码示例">
+<meta property="og:title" content="节点Node">
 <meta property="og:url" content="http://yoursite.com/2017/02/03/节点Node/index.html">
 <meta property="og:site_name" content="江海峰">
-<meta property="og:description" content="有关节点的一些运用和一些代码示例">
-<meta property="og:updated_time" content="2017-03-12T11:49:08.160Z">
+<meta property="og:description" content="一些节点的使用方法和例子">
+<meta property="og:updated_time" content="2017-03-12T11:54:18.508Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="有关节点的一些运用和一些代码示例">
-<meta name="twitter:description" content="有关节点的一些运用和一些代码示例">
+<meta name="twitter:title" content="节点Node">
+<meta name="twitter:description" content="一些节点的使用方法和例子">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>有关节点的一些运用和一些代码示例 | 江海峰</title>
+<title>节点Node | 江海峰</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -289,7 +289,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      有关节点的一些运用和一些代码示例
+      节点Node
     </h1>
   
 
@@ -306,11 +306,11 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><excerpt in="" index="" |="" 首页摘要=""><br>有关节点的一些运用和一些代码示例<a id="more"></a></excerpt></p>
-<p><the rest="" of="" contents="" |="" 余下全文=""></the></p>
-<p>##节点Node</p>
-<p>##节点属性</p>
-<p>在文档对象模型 (DOM) 中，每个节点都是一个对象。DOM 节点有三个重要的属性 ：</p>
+        <p><excerpt in="" index="" |="" 首页摘要=""><br>一些节点的使用方法和例子<a id="more"></a></excerpt></p>
+<the rest="" of="" contents="" |="" 余下全文="">
+
+
+<h2 id="节点Node"><a href="#节点Node" class="headerlink" title="节点Node"></a>节点Node</h2><h2 id="节点属性"><a href="#节点属性" class="headerlink" title="节点属性"></a>节点属性</h2><p>在文档对象模型 (DOM) 中，每个节点都是一个对象。DOM 节点有三个重要的属性 ：</p>
 <ol>
 <li><p>nodeName : 节点的名称</p>
 </li>
@@ -360,7 +360,7 @@ null
 LI
 null
 1
-</code></pre><p>##访问子节点childNodes<br>访问选定元素节点下的所有子节点的列表，返回的值可以看作是一个数组，他具有length属性。</p>
+</code></pre><h2 id="访问子节点childNodes"><a href="#访问子节点childNodes" class="headerlink" title="访问子节点childNodes"></a>访问子节点childNodes</h2><p>访问选定元素节点下的所有子节点的列表，返回的值可以看作是一个数组，他具有length属性。</p>
 <pre><code>elementNode.childNodes
 </code></pre><p><strong>注意：</strong></p>
 <p>如果选定的节点没有子节点，则该属性返回不包含节点的 NodeList。</p>
@@ -414,8 +414,7 @@ UL
 <p>如果把代码改成这样:</p>
 <pre><code>&lt;ul&gt;&lt;li&gt;javascript&lt;/li&gt;&lt;li&gt;jQuery&lt;/li&gt;&lt;li&gt;PHP&lt;/li&gt;&lt;/ul&gt;
 </code></pre><p>运行结果:（IE和其它浏览器结果是一样的）</p>
-<p>##访问子节点的第一和最后项</p>
-<p>一、firstChild 属性返回‘childNodes’数组的第一个子节点。如果选定的节点没有子节点，则该属性返回 NULL。</p>
+<h2 id="访问子节点的第一和最后项"><a href="#访问子节点的第一和最后项" class="headerlink" title="访问子节点的第一和最后项"></a>访问子节点的第一和最后项</h2><p>一、firstChild 属性返回‘childNodes’数组的第一个子节点。如果选定的节点没有子节点，则该属性返回 NULL。</p>
 <pre><code>node.firstChild
 </code></pre><p><strong>说明</strong>：与elementNode.childNodes[0]是同样的效果。 </p>
 <p>二、 lastChild 属性返回‘childNodes’数组的最后一个子节点。如果选定的节点没有子节点，则该属性返回 NULL。</p>
@@ -438,8 +437,7 @@ PHP
 
 javascriptP1null
 PHPH51null
-</code></pre><p>##访问父节点parentNode</p>
-<p>获取指定节点的父节点</p>
+</code></pre><h2 id="访问父节点parentNode"><a href="#访问父节点parentNode" class="headerlink" title="访问父节点parentNode"></a>访问父节点parentNode</h2><p>获取指定节点的父节点</p>
 <pre><code>elementNode.parentNode
 </code></pre><p><strong>注意:父节点只能有一个。</strong></p>
 <p>看看下面的例子,获取 P 节点的父节点，代码如下:</p>
@@ -470,7 +468,7 @@ parentNode
 <pre><code>parentNode获取指点节点的父节点
 DIV
 </code></pre><p>注意: 浏览器兼容问题，chrome、firefox等浏览器标签之间的空白也算是一个文本节点。</p>
-<p>##访问兄弟节点<br>1.nextSibling 属性可返回某个节点之后紧跟的节点（处于同一树层级中）。</p>
+<h2 id="访问兄弟节点"><a href="#访问兄弟节点" class="headerlink" title="访问兄弟节点"></a>访问兄弟节点</h2><p>1.nextSibling 属性可返回某个节点之后紧跟的节点（处于同一树层级中）。</p>
 <pre><code>nodeObject.nextSibling
 </code></pre><p><strong>说明</strong>：如果无此节点，则该属性返回 null。</p>
 <p>2.previousSibling 属性可返回某个节点之前紧跟的节点（处于同一树层级中）。</p>
@@ -546,7 +544,7 @@ jquery
 html
 
 nextsibling: LI = jquery
-</code></pre><p>##创建元素节点createElement<br>createElement()方法可创建元素节点。此方法可返回一个 Element 对象。</p>
+</code></pre><h2 id="创建元素节点createElement"><a href="#创建元素节点createElement" class="headerlink" title="创建元素节点createElement"></a>创建元素节点createElement</h2><p>createElement()方法可创建元素节点。此方法可返回一个 Element 对象。</p>
 <pre><code>document.createElement(tagName)
 </code></pre><p><strong>参数:</strong><br>tagName：字符串值，这个字符串用来指明创建元素的类型。<br>注意：要与appendChild() 或 insertBefore()方法联合使用，将元素显示在页面中。</p>
 <p><strong>任务</strong></p>
@@ -570,7 +568,7 @@ main.appendChild(a);
 // 调用函数创建链接
 createa(&quot;http://www.imooc.com&quot;,&quot;慕课网&quot;);
 &lt;/script&gt; 
-</code></pre><p>##创建文本节点createTextNode<br>createTextNode() 方法创建新的文本节点，返回新创建的 Text 节点。</p>
+</code></pre><h2 id="创建文本节点createTextNode"><a href="#创建文本节点createTextNode" class="headerlink" title="创建文本节点createTextNode"></a>创建文本节点createTextNode</h2><p>createTextNode() 方法创建新的文本节点，返回新创建的 Text 节点。</p>
 <pre><code>document.createTextNode(data)
 </code></pre><p><strong>参数：</strong><br>data : 字符串值，可规定此节点的文本。</p>
 <p><strong>任务</strong><br>在代码编辑器<script>标签中，创建一个P标签，设置className属性，使用createTextNode创建文本节点”I love JavaScript!”。</p>
@@ -591,7 +589,7 @@ p.appendChild(txt);
 document.body.appendChild(p);
 &lt;/script&gt;
 &lt;/body&gt;
-</code></pre><p>##插入节点appendChild()<br>在指定节点的最后一个子节点列表之后添加一个新的子节点。</p>
+</code></pre><h2 id="插入节点appendChild"><a href="#插入节点appendChild" class="headerlink" title="插入节点appendChild()"></a>插入节点appendChild()</h2><p>在指定节点的最后一个子节点列表之后添加一个新的子节点。</p>
 <pre><code>appendChild(newnode)
 </code></pre><p><strong>参数:</strong><br>newnode：指定追加的节点。</p>
 <p><strong>任务：</strong><br>实现创建一个新li标签，内容为”php”,并将新创建的li插入<br>ul中。</p>
@@ -613,8 +611,7 @@ document.body.appendChild(p);
 <pre><code>JavaScript
 HTML
 PHP
-</code></pre><p>##插入节点insertBefore()</p>
-<p>insertBefore() 方法可在已有的子节点前插入一个新的子节点。</p>
+</code></pre><h2 id="插入节点insertBefore"><a href="#插入节点insertBefore" class="headerlink" title="插入节点insertBefore()"></a>插入节点insertBefore()</h2><p>insertBefore() 方法可在已有的子节点前插入一个新的子节点。</p>
 <pre><code>insertBefore(newnode,node);
 </code></pre><p>参数:<br>newnode: 要插入的新节点。<br>node: 指定此节点前插入节点。</p>
 <p>注意参数node可以写为otest//获取的节点.childNodes[1//插入的地方]</p>
@@ -631,8 +628,7 @@ PHP
 <pre><code>JavaScript
 PHP
 HTML
-</code></pre><p>##删除节点removeChild()</p>
-<p>removeChild() 方法从子节点列表中删除某个节点。如删除成功，此方法可返回被删除的节点，如失败，则返回 NULL。</p>
+</code></pre><h2 id="删除节点removeChild"><a href="#删除节点removeChild" class="headerlink" title="删除节点removeChild()"></a>删除节点removeChild()</h2><p>removeChild() 方法从子节点列表中删除某个节点。如删除成功，此方法可返回被删除的节点，如失败，则返回 NULL。</p>
 <pre><code>nodeObject.removeChild(node)
 </code></pre><p><strong>参数:</strong><br>node ：必需，指定需要删除的节点。</p>
 <p><strong>任务</strong></p>
@@ -670,8 +666,7 @@ function clearText() {
 &lt;/script&gt;
 &lt;button onclick=&quot;clearText()&quot;&gt;清除节点内容&lt;/button&gt;
 &lt;/body&gt;
-</code></pre><p>##替换元素节点replaceChild()</p>
-<p>replaceChild 实现子节点(对象)的替换。返回被替换对象的引用。</p>
+</code></pre><h2 id="替换元素节点replaceChild"><a href="#替换元素节点replaceChild" class="headerlink" title="替换元素节点replaceChild()"></a>替换元素节点replaceChild()</h2><p>replaceChild 实现子节点(对象)的替换。返回被替换对象的引用。</p>
 <pre><code>node.replaceChild (newnode,oldnew ) 
 </code></pre><p><strong>参数：</strong></p>
 <p>newnode : 必需，用于替换 oldnew 的对象。 </p>
@@ -695,7 +690,7 @@ function clearText() {
            oldnode.parentNode.replaceChild(newnode,oldnode);
    }
   &lt;/script&gt;
-</code></pre></script></p>
+</code></pre></script></p></the>
       
     </div>
     
@@ -714,8 +709,8 @@ function clearText() {
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2015/12/03/hello-world/">
-                    holler word
+                <a href="/2017/02/03/古诗词背串/">
+                    古诗词背串
                 </a>
             </div>
         
@@ -727,7 +722,7 @@ function clearText() {
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#节点Node"><span class="toc-number">1.</span> <span class="toc-text">节点Node</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#节点属性"><span class="toc-number">2.</span> <span class="toc-text">节点属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#访问子节点childNodes"><span class="toc-number">3.</span> <span class="toc-text">访问子节点childNodes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#访问子节点的第一和最后项"><span class="toc-number">4.</span> <span class="toc-text">访问子节点的第一和最后项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#访问父节点parentNode"><span class="toc-number">5.</span> <span class="toc-text">访问父节点parentNode</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#访问兄弟节点"><span class="toc-number">6.</span> <span class="toc-text">访问兄弟节点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建元素节点createElement"><span class="toc-number">7.</span> <span class="toc-text">创建元素节点createElement</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建文本节点createTextNode"><span class="toc-number">8.</span> <span class="toc-text">创建文本节点createTextNode</span></a></li></ol>
         
     </div>
     <style>
@@ -763,7 +758,7 @@ function clearText() {
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"有关节点的一些运用和一些代码示例　| 江海峰　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"节点Node　| 江海峰　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -791,13 +786,13 @@ function clearText() {
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2015/12/03/hello-world/" title="下一篇: holler word">
+            <a href="/2017/02/03/古诗词背串/" title="下一篇: 古诗词背串">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/02/20/HTML基础/">HTML基础笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/03/hexo部署blog/">hexo布置blog到git</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/03/古诗词背串/">古诗词背串</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/03/sublime运行js/">sublime text3 运行javascript</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/03/节点Node/">有关节点的一些运用和一些代码示例</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/03/hello-world/">holler word</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/02/20/HTML基础/">HTML基础笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/03/hexo部署blog/">hexo布置blog到git</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/03/sublime运行js/">sublime text3 运行javascript</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/03/节点Node/">节点Node</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/03/古诗词背串/">古诗词背串</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/03/hello-world/">holler word</a></li></ul>
 
 
 
