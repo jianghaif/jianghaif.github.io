@@ -15,16 +15,16 @@
 
 
 
-<meta name="description" content="HTML基础的标签记录和使用">
+<meta name="description" content="利用node.js使得sublime可以直接运行js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTML基础笔记">
-<meta property="og:url" content="http://yoursite.com/2017/02/20/HTML基础/index.html">
+<meta property="og:title" content="sublime text3 运行javascript">
+<meta property="og:url" content="http://yoursite.com/2017/02/03/sublime运行js/index.html">
 <meta property="og:site_name" content="江海峰">
-<meta property="og:description" content="HTML基础的标签记录和使用">
-<meta property="og:updated_time" content="2017-02-28T05:38:54.130Z">
+<meta property="og:description" content="利用node.js使得sublime可以直接运行js">
+<meta property="og:updated_time" content="2017-03-12T11:46:14.966Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HTML基础笔记">
-<meta name="twitter:description" content="HTML基础的标签记录和使用">
+<meta name="twitter:title" content="sublime text3 运行javascript">
+<meta name="twitter:description" content="利用node.js使得sublime可以直接运行js">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>HTML基础笔记 | 江海峰</title>
+<title>sublime text3 运行javascript | 江海峰</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -270,11 +270,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-HTML基础" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-sublime运行js" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/02/20/HTML基础/" class="article-date">
-      <time datetime="2017-02-19T16:00:00.000Z" itemprop="datePublished">2017-02-20</time>
+      <a href="/2017/02/03/sublime运行js/" class="article-date">
+      <time datetime="2017-02-02T16:00:00.000Z" itemprop="datePublished">2017-02-03</time>
 </a>
 
 
@@ -289,7 +289,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      HTML基础笔记
+      sublime text3 运行javascript
     </h1>
   
 
@@ -306,130 +306,22 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><excerpt in="" index="" |="" 首页摘要=""><br>HTML基础的标签记录和使用<a id="more"></a></excerpt></p>
-<p><the rest="" of="" contents="" |="" 余下全文=""></the></p>
-<p>##HTML基础</p>
-<p\><p></p>: 段落标签<br><br>标签中可以添加属性<br><br>属性在开始的标签中 与标签相隔一个空格属性名称应被引号保温并接上等号<br><br>    <p class="editor-note"></p>
+        <p><excerpt in="" index="" |="" 首页摘要=""><br>利用node.js使得sublime可以直接运行js<a id="more"></a></excerpt></p>
+<the rest="" of="" contents="" |="" 余下全文="">
 
-<p><strong>嵌套</strong></p>
-<p>将一个标签置于其他标签之中——这被称作嵌套</p>
-<pre><code>&lt;/p&gt;段落中的&lt;stong&gt;内容&lt;/stong&gt;&lt;/p&gt;
-strong标签表示强调p中其他不变但是“内容”被strong修饰了
-</code></pre><p><strong>空元素</strong></p>
-<p>有些元素不包含内容。被称之为空元素</p>
-<pre><code>&lt;img src=&quot;图片&quot; alt=&quot;显示文本&quot;&gt; 
-特别alt:规定图片无法显示时的代替显示的文本内容
-</code></pre><p><strong>HTML所必需的元素</strong></p>
-<pre><code>1. &lt;html&gt;&lt;/html&gt;:包含了整个页面的内容，有时也被称作根元素。
-2. &lt;head&gt;&lt;/head&gt;:包含了所有和页面相关的信息，但是不会被用户所看到
-3. &lt;body&gt;&lt;/body&gt;:包含了你想被用户看到的内容
-4. &lt;meta charset=&quot;utf-8&quot;&gt;:指定了文档需要使用的字符编码
-5. &lt;title&gt;&lt;/title&gt;:设置了页面的标题，标题显示在浏览器标签页上，
- 而且在将网页添加到收藏夹或喜爱中时将作为默认名称
-</code></pre><ol>
-<li><pre><code>&lt;html&gt;
-   &lt;head&gt;
-      &lt;meta charset=&quot;utf-8&quot;&gt;
-      &lt;title&gt;标题&lt;/title&gt;
-   &lt;/head&gt;
-   &lt;body&gt;
-    &lt;img src=&quot;图片&quot; alt=&quot;无法显示&quot;&gt;
-    &lt;p&gt;一段实例&lt;/p&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-</code></pre></li>
-</ol>
-<p><strong>图像image</strong></p>
-<pre><code>&lt;img src=&quot;图片路径&quot; alt=&quot;图片描述&quot;&gt;
-</code></pre><p>将图像嵌入到元素所在位置。通过图像文件路径 src属性实现这一功能。</p>
-<p>但是这一元素需要包括alt属性 对图片无法显示时进行图片文字描述</p>
-<p>##标记文本</p>
-<p><strong>标题</strong></p>
-<p>HTML 包括六个级别的标题，，虽然可能只会用到 3-4 最多。</p>
-<pre><code>&lt;h1&gt;–&lt;/h1&gt;
-    ...
-&lt;h6&gt;-&lt;/h6&gt;
-</code></pre><p></p><h1>标题1</h1><p></p>
-<p></p><h2>标题2</h2><p></p>
-<h3>标题3</h3>
 
-<p><strong>段落</strong></p>
-<pre><code>&lt;p&gt;内容&lt;/p&gt;
-
-&lt;p&gt; 元素是用来指定段落的。可以用它来指定常规的文本内容
-</code></pre><p><strong>&nbsp;空格</strong></p>
-<pre><code>将&amp;nbsp;插入html标签中显示空格
-</code></pre><p><strong>列表</strong></p>
-<p>Web上的内容都是列表，要标记列表通常包括至少两个元素最，</p>
-<p>常用的列表类型是有序列表（ ordered lists）和无序列表（ unordered lists）</p>
-<ol>
-<li>无序列表 中项目的顺序并不重要。这些内容被包括在一个 ul 元素里。</li>
-<li>有序列表 中项目的顺序很重要，就像一个食谱。这些内容被包括在一个 ol 元素里。</li>
-</ol>
-<p>列表内的每个项目被包括在一个 li (list item)元素里</p>
-<pre><code>&lt;p&gt;At Mozilla, we’re a global community of&lt;/p&gt;
-    /*将p标签中的元素改成列表*/
-&lt;ul&gt; 
-  &lt;li&gt;technologists&lt;/li&gt;
-  &lt;li&gt;thinkers&lt;/li&gt;
-  &lt;li&gt;builders&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt; 
-  &lt;li&gt;technologists&lt;/li&gt;
-  &lt;li&gt;thinkers&lt;/li&gt;
-  &lt;li&gt;builders&lt;/li&gt;
-&lt;/ol&gt;
-</code></pre><p><strong>链接</strong></p>
-<p>要植入一个链接，我们需要使用一个简单的link — \<a\> — a 是 “anchor” （锚）的缩写。要将一些文本添加到链接中，只需如下几步：</a\></p>
-<p>添加一些文本。我们选择“Mozilla Manifesto”。</p>
-<p>将文本包含在 <a\> 元素内，就像这样</a\></p>
-<pre><code>&lt;a&gt;Mozilla Manifesto&lt;/a&gt;
-</code></pre><p>赋予 <a\> 元素一个 href 属性，就像这样：</a\></p>
-<pre><code>&lt;a href=&quot;&quot;&gt;&lt;/a&gt;
-</code></pre><p>把想要链接的网址放到 href 属性内：</p>
-<pre><code>&lt;a href=&quot;https://www.mozilla.org/en-US/about/manifesto/&quot;&gt;Mozilla Manifesto&lt;/a&gt;
-</code></pre><p><strong>表格</strong></p>
-<p>由table标签来定义表格的行数由tr标签定义每行的个数由td标签定义列数</p>
-<p>表头由th标签定义</p>
-<p>表格的边框属性为border定义表格边框的大小</p>
-<pre><code>&lt;table border=&quot;1&quot;&gt;
-&lt;tr&gt;
-&lt;th&gt;Header 1&lt;/th&gt;
-&lt;th&gt;Header 2&lt;/th&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;row 1, cell 1&lt;/td&gt;
-&lt;td&gt;row 1, cell 2&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;row 2, cell 1&lt;/td&gt;
-&lt;td&gt;row 2, cell 2&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;
-</code></pre><table border="1"><br>    <tr><br>    <th>Header 1</th><br>    <th>Header 2</th><br>    </tr><br>    <tr><br>    <td>row 1, cell 1</td><br>    <td>row 1, cell 2</td><br>    </tr><br>    <tr><br>    <td>row 2, cell 1</td><br>    <td>row 2, cell 2</td><br>    </tr><br>    </table>
-
-<p><strong>表单</strong></p>
-<pre><code>&lt;form&gt;
-    这是表单：&lt;input type=&quot;text&quot; name=&quot;这是什么&quot;&gt;
-&lt;/form&gt;
-</code></pre><p>单选按钮</p>
-<pre><code>&lt;form&gt;
-    这是单选按钮：&lt;input type=&quot;radio&quot; name=&quot;这是什么&quot;&gt;
-    这是这是单选按钮：&lt;input type=&quot;radio&quot; name=&quot;这是什么&quot;&gt;
-&lt;/form&gt;
-</code></pre><p>复选框</p>
-<pre><code>&lt;form&gt;
-    这是按钮：&lt;input type=&quot;checkbox&quot; name=&quot;这是什么&quot;&gt;
-    这是按钮：&lt;input type=&quot;checkbox&quot; name=&quot;这是什么&quot;&gt;
-&lt;/form&gt;
-</code></pre><p>提交按钮</p>
-<pre><code>&lt;form&gt;
-    &lt;textarea&gt;&lt;/textarea&gt;
-    &lt;input type=&quot;submit&quot; value=&quot;提交按钮&quot;&gt;
-&lt;/form&gt;
-</code></pre><p>textarea多行输入的文本输入框</p>
-<p>&amp;copy 版权符</p>
-</p\>
+<p>1.下载node.js.</p>
+<p>2.打开sublime </p>
+<p>3.选择–&gt;Tool–&gt;build System–&gt;new Build System</p>
+<p>4.将内容改为</p>
+<pre><code>&quot;cmd&quot;: [&quot;node&quot;, &quot;$file&quot;],
+&quot;file_regex&quot;: &quot;^[ ]*File \&quot;(...*?)\&quot;, line ([0-9]*)&quot;,
+&quot;selector&quot;: &quot;source.javascript&quot;
+并保存为node
+</code></pre><p>5.关闭sublime重新打开</p>
+<p>6.建立js文件。并选择Tool–&gt;build System–&gt;node</p>
+<p>7.ctrl+B运行</p>
+</the>
       
     </div>
     
@@ -440,10 +332,16 @@ strong标签表示强调p中其他不变但是“内容”被strong修饰了
 
     <nav id="article-nav">
         
-        
-            <div id="article-nav-older" class="article-nav-title">
+            <div id="article-nav-newer" class="article-nav-title">
                 <a href="/2017/02/03/hexo部署blog/">
                     hexo布置blog到git
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/02/03/古诗词背串/">
+                    古诗词背串
                 </a>
             </div>
         
@@ -455,7 +353,7 @@ strong标签表示强调p中其他不变但是“内容”被strong修饰了
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">标题1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.</span> <span class="toc-text">标题2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.1.</span> <span class="toc-text">标题3</span></a></li></ol></li></ol></li></ol>
+            
         
     </div>
     <style>
@@ -491,7 +389,7 @@ strong标签表示强调p中其他不变但是“内容”被strong修饰了
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"HTML基础笔记　| 江海峰　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"sublime text3 运行javascript　| 江海峰　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -511,13 +409,15 @@ strong标签表示强调p中其他不变但是“内容”被strong修饰了
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2017/02/03/hexo部署blog/" title="上一篇: hexo布置blog到git">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/02/03/hexo部署blog/" title="下一篇: hexo布置blog到git">
+            <a href="/2017/02/03/古诗词背串/" title="下一篇: 古诗词背串">
                 <i class="fa fa-angle-right"></i>
             </a>
         

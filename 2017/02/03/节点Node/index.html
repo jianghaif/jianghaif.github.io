@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="江海峰" />
+
+
+
+<meta name="description" content="有关节点的一些运用和一些代码示例">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sublime text3 运行javascript">
+<meta property="og:url" content="http://yoursite.com/2017/02/03/节点Node/index.html">
+<meta property="og:site_name" content="江海峰">
+<meta property="og:description" content="有关节点的一些运用和一些代码示例">
+<meta property="og:updated_time" content="2017-03-12T11:45:58.888Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="sublime text3 运行javascript">
+<meta name="twitter:description" content="有关节点的一些运用和一些代码示例">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="江海峰" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>sublime text3 运行javascript | 江海峰</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: undefined
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/jhf.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">江海峰</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">岂能无志活百年</p>
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:976179525@qq.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/jianghaif" title="GitHub"></a>
+                            
+                                <a class="fa 知乎" href="https://www.zhihu.com/people/jiang-hai-feng-39/activities" title="知乎"></a>
+                            
+                                <a class="fa CSDN" href="http://my.csdn.net/jhfleander" title="CSDN"></a>
+                            
+                                <a class="fa 网易云音乐" href="http://music.163.com/#/user/home?id=385512069" title="网易云音乐"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">江海峰</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/jhf.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">江海峰</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">岂能无志活百年</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:976179525@qq.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/jianghaif" title="GitHub"></a>
+                            
+                                <a class="fa 知乎" target="_blank" href="https://www.zhihu.com/people/jiang-hai-feng-39/activities" title="知乎"></a>
+                            
+                                <a class="fa CSDN" target="_blank" href="http://my.csdn.net/jhfleander" title="CSDN"></a>
+                            
+                                <a class="fa 网易云音乐" target="_blank" href="http://music.163.com/#/user/home?id=385512069" title="网易云音乐"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-节点Node" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/02/03/节点Node/" class="article-date">
+      <time datetime="2017-02-02T16:00:00.000Z" itemprop="datePublished">2017-02-03</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      sublime text3 运行javascript
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><excerpt in="" index="" |="" 首页摘要=""><br>有关节点的一些运用和一些代码示例<a id="more"></a></excerpt></p>
+<p><the rest="" of="" contents="" |="" 余下全文=""></the></p>
+<p>##节点Node</p>
+<p>##节点属性</p>
+<p>在文档对象模型 (DOM) 中，每个节点都是一个对象。DOM 节点有三个重要的属性 ：</p>
+<ol>
+<li><p>nodeName : 节点的名称</p>
+</li>
+<li><p>nodeValue ：节点的值</p>
+</li>
+<li><p>nodeType ：节点的类型</p>
+</li>
+</ol>
+<p>一、nodeName 属性: 节点的名称，是只读的。</p>
+<ol>
+<li>元素节点的 nodeName 与标签名相同</li>
+<li>属性节点的 nodeName 是属性的名称</li>
+<li>文本节点的 nodeName 永远是 #text</li>
+<li>文档节点的 nodeName 永远是 #document</li>
+</ol>
+<p>二、nodeValue 属性：节点的值</p>
+<ol>
+<li>元素节点的 nodeValue 是 undefined 或 null</li>
+<li>文本节点的 nodeValue 是文本自身</li>
+<li>属性节点的 nodeValue 是属性的值</li>
+</ol>
+<p>三、nodeType 属性: 节点的类型，是只读的。以下常用的几种结点类型:</p>
+<p>元素类型    节点类型<br>  元素          1<br>  属性          2<br>  文本          3<br>  注释          8<br>  文档          9</p>
+<pre><code>  &lt;ul&gt;
+ &lt;li&gt;javascript&lt;/li&gt;
+ &lt;li&gt;HTML/CSS&lt;/li&gt;
+ &lt;li&gt;jQuery&lt;/li&gt; 
+  &lt;/ul&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;
+var List=document.getElementsByTagName(&quot;li&quot;);
+for(var i=0;i&lt;List.length;i++){
+document.write(List[i].nodeName +&quot;&lt;br&gt;&quot;);
+document.write(List[i].nodeValue +&quot;&lt;br&gt;&quot;);
+document.write(List[i].nodeType+&quot;&lt;br&gt;&quot;);
+}
+  &lt;/script&gt;
+</code></pre><p>运行结果：</p>
+<pre><code>javascript
+HTML/CSS
+jQuery
+LI
+null
+1
+LI
+null
+1
+LI
+null
+1
+</code></pre><p>##访问子节点childNodes<br>访问选定元素节点下的所有子节点的列表，返回的值可以看作是一个数组，他具有length属性。</p>
+<pre><code>elementNode.childNodes
+</code></pre><p><strong>注意：</strong></p>
+<p>如果选定的节点没有子节点，则该属性返回不包含节点的 NodeList。</p>
+<p>例子的代码:</p>
+<pre><code>&lt;body&gt;
+&lt;div&gt;javascript&lt;p&gt;javascript&lt;/p&gt;&lt;div&gt;jQuery&lt;/div&gt;&lt;h5&gt;PHP&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;javascript&lt;/li&gt;&lt;li&gt;jQuery&lt;/li&gt;&lt;li&gt;PHP&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+ var x=document.getElementsByTagName(&quot;ul&quot;)[0].childNodes;
+ document.write(&quot;长度&quot;+x.length);
+ document.write(&quot;类型&quot;+x[0].nodeType+&quot;&lt;br&gt;&quot;);
+ var y=document.getElementsByTagName(&quot;div&quot;)[0].childNodes;
+ for(var i=0;i&lt;y.length;i++){
+ document.write(y[i]+&quot;&lt;br&gt;&quot;);
+ document.write(y[i].nodeName+&quot;&lt;br&gt;&quot;);
+ }
+&lt;/script&gt;
+&lt;/body&gt;
+</code></pre><p>运行结果</p>
+<pre><code>javascript
+javascript
+
+jQuery
+PHP
+
+javascript
+jQuery
+PHP
+长度3类型1
+[object Text]
+#text
+[object HTMLParagraphElement]
+P
+[object HTMLDivElement]
+DIV
+[object HTMLHeadingElement]
+H5
+[object HTMLUListElement]
+UL
+</code></pre><p>注意:</p>
+<ol>
+<li><p>IE全系列、firefox、chrome、opera、safari兼容问题</p>
+</li>
+<li><p>节点之间的空白符，在firefox、chrome、opera、safari浏览器是文本节点，所以IE是3，其它浏览器是7，如下:</p>
+<pre><code>&lt;ul&gt;空白节点
+&lt;li&gt;javascript&lt;/li&gt;空白节点
+&lt;li&gt;jQuery&lt;/li&gt;空白节点
+&lt;li&gt;PHP&lt;/li&gt;空白节点
+&lt;/ul&gt;
+</code></pre></li>
+</ol>
+<p>如果把代码改成这样:</p>
+<pre><code>&lt;ul&gt;&lt;li&gt;javascript&lt;/li&gt;&lt;li&gt;jQuery&lt;/li&gt;&lt;li&gt;PHP&lt;/li&gt;&lt;/ul&gt;
+</code></pre><p>运行结果:（IE和其它浏览器结果是一样的）</p>
+<p>##访问子节点的第一和最后项</p>
+<p>一、firstChild 属性返回‘childNodes’数组的第一个子节点。如果选定的节点没有子节点，则该属性返回 NULL。</p>
+<pre><code>node.firstChild
+</code></pre><p><strong>说明</strong>：与elementNode.childNodes[0]是同样的效果。 </p>
+<p>二、 lastChild 属性返回‘childNodes’数组的最后一个子节点。如果选定的节点没有子节点，则该属性返回 NULL。</p>
+<pre><code>node.lastChild
+</code></pre><p><strong>说明</strong>：与elementNode.childNodes[elementNode.childNodes.length-1]是同样的效果。</p>
+<p><strong>注意</strong>:IE 会忽略节点之间生成的空白文本节点，而其它浏览器不会。我们可以通过检测节点类型，过滤子节点。</p>
+<pre><code>&lt;div id=&quot;con&quot;&gt;&lt;p&gt;javascript&lt;/p&gt;&lt;div&gt;jQuery&lt;/div&gt;&lt;h5&gt;PHP&lt;/h5&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  var x=document.getElementById(&quot;con&quot;);
+  var y=x.firstChild;
+  var z=x.lastChild;
+ document.write(y.innerHTML+y.nodeName+y.nodeType+y.nodeValue+&quot;&lt;br&gt;&quot;);
+ document.write(z.innerHTML+z.nodeName+z.nodeType+z.nodeValue);
+&lt;/script&gt;
+</code></pre><p>运行结果：</p>
+<pre><code>javascript
+
+jQuery
+PHP
+
+javascriptP1null
+PHPH51null
+</code></pre><p>##访问父节点parentNode</p>
+<p>获取指定节点的父节点</p>
+<pre><code>elementNode.parentNode
+</code></pre><p><strong>注意:父节点只能有一个。</strong></p>
+<p>看看下面的例子,获取 P 节点的父节点，代码如下:</p>
+<pre><code>&lt;div id=&quot;text&quot;&gt;
+  &lt;p id=&quot;con&quot;&gt; parentNode 获取指点节点的父节点&lt;/p&gt;
+&lt;/div&gt; 
+&lt;script type=&quot;text/javascript&quot;&gt;
+  var mynode= document.getElementById(&quot;con&quot;);
+  document.write(mynode.parentNode.nodeName);
+&lt;/script&gt;
+</code></pre><p>运行结果:</p>
+<pre><code>parentNode 获取指点节点的父节点
+DIV
+</code></pre><p><strong>访问祖节点:</strong></p>
+<pre><code>elementNode.parentNode.parentNode
+</code></pre><p>代码:</p>
+<pre><code>&lt;div id=&quot;text&quot;&gt;  
+  &lt;p&gt;
+parentNode  
+&lt;span id=&quot;con&quot;&gt; 获取指点节点的父节点&lt;/span&gt;
+  &lt;/p&gt;
+&lt;/div&gt; 
+&lt;script type=&quot;text/javascript&quot;&gt;
+  var mynode= document.getElementById(&quot;con&quot;);
+  document.write(mynode.parentNode.parentNode.nodeName);
+&lt;/script&gt;
+</code></pre><p>运行结果:</p>
+<pre><code>parentNode获取指点节点的父节点
+DIV
+</code></pre><p>注意: 浏览器兼容问题，chrome、firefox等浏览器标签之间的空白也算是一个文本节点。</p>
+<p>##访问兄弟节点<br>1.nextSibling 属性可返回某个节点之后紧跟的节点（处于同一树层级中）。</p>
+<pre><code>nodeObject.nextSibling
+</code></pre><p><strong>说明</strong>：如果无此节点，则该属性返回 null。</p>
+<p>2.previousSibling 属性可返回某个节点之前紧跟的节点（处于同一树层级中）。</p>
+<pre><code>nodeObject.previousSibling  
+</code></pre><p><strong>说明</strong>：如果无此节点，则该属性返回 null。</p>
+<p>注意: 两个属性获取的是节点。Internet Explorer 会忽略节点间生成的空白文本节点（例如，换行符号），而其它浏览器不会忽略。</p>
+<p>解决问题方法:</p>
+<p>判断节点nodeType是否为1, 如是为元素节点，跳过。</p>
+<pre><code>&lt;body&gt;
+&lt;ul id=&quot;u1&quot;&gt;   
+&lt;li id=&quot;a&quot;&gt;javascript&lt;/li&gt;   
+&lt;li id=&quot;b&quot;&gt;jquery&lt;/li&gt;   
+&lt;li id=&quot;c&quot;&gt;html&lt;/li&gt;   
+&lt;/ul&gt;   
+&lt;ul id=&quot;u2&quot;&gt;   
+&lt;li id=&quot;d&quot;&gt;css3&lt;/li&gt;   
+&lt;li id=&quot;e&quot;&gt;php&lt;/li&gt;   
+&lt;li id=&quot;f&quot;&gt;java&lt;/li&gt;   
+&lt;/ul&gt;   
+&lt;script type=&quot;text/javascript&quot;&gt;
+function get_nextSibling(n//节点参数){
+var x=n.nextSibling;// 进入函数，首先取得下一个兄弟节点
+while (x &amp;&amp; x.nodeType!=1) // x存在并且x不是元素节点(若不满足，说明直接找到了兄弟节点，那么就直接返回){
+x=x.nextSibling;// 满足上述条件，进入循环体，再次取x的兄弟节点赋值给x本身
+}
+return x;
+}
+function get_previous(n){
+var z=n.previousSibling;
+while(z &amp;&amp; z.nodeType!=1){
+z=z.previousSibling;
+}
+return z;
+}
+var x=document.getElementsByTagName(&quot;li&quot;)[0];
+var b=document.getElementById(&quot;u2&quot;);
+document.write(x.nodeName);
+document.write(&quot; = &quot;);
+document.write(x.innerHTML);
+
+var y=get_nextSibling(x);
+var c=get_previous(b);
+if(c!=null){
+document.write(&quot;&lt;br/&gt;previousSibling:&quot;);
+document.write(c.nodeName);
+document.write(&quot;=&quot;);
+document.write(c.innerHTML);
+}else{
+  document.write(&quot;&lt;br&gt;已经是最后一个节点&quot;);  
+}
+
+if(y!=null){
+document.write(&quot;&lt;br /&gt;nextsibling: &quot;);
+document.write(y.nodeName);
+document.write(&quot; = &quot;);
+document.write(y.innerHTML);
+}else{
+  document.write(&quot;&lt;br&gt;已经是最后一个节点&quot;);  
+}
+
+&lt;/script&gt;
+</code></pre><p>运行结果：</p>
+<pre><code>javascript
+jquery
+html
+css3
+php
+java
+LI = javascript
+previousSibling:UL=
+javascript
+jquery
+html
+
+nextsibling: LI = jquery
+</code></pre><p>##创建元素节点createElement<br>createElement()方法可创建元素节点。此方法可返回一个 Element 对象。</p>
+<pre><code>document.createElement(tagName)
+</code></pre><p><strong>参数:</strong><br>tagName：字符串值，这个字符串用来指明创建元素的类型。<br>注意：要与appendChild() 或 insertBefore()方法联合使用，将元素显示在页面中。</p>
+<p><strong>任务</strong></p>
+<p>试一试，实现在HTML文档中创建一个链接，并设置相应属性。</p>
+<ol>
+<li>在右边编辑器补充代码，完善createa(url,text)创建链接函数，参数1为链接地址，参数2为链接文本。函数中添加链接地址、文本、文字颜色属性。</li>
+<li>调用createa函数，链接地址 <a href="http://www.imooc.com，文本为:慕课网" target="_blank" rel="external">http://www.imooc.com，文本为:慕课网</a></li>
+</ol>
+<p>代码如下：</p>
+<pre><code>        &lt;script type=&quot;text/javascript&quot;&gt;
+var main = document.body;
+//创建链接
+function createa(url,text)
+{   
+var a=document.createElement(&quot;a&quot;);
+a.href=url;
+a.innerHTML=text;
+a.style.color=&quot;#ccc&quot;;
+main.appendChild(a);
+}
+// 调用函数创建链接
+createa(&quot;http://www.imooc.com&quot;,&quot;慕课网&quot;);
+&lt;/script&gt; 
+</code></pre><p>##创建文本节点createTextNode<br>createTextNode() 方法创建新的文本节点，返回新创建的 Text 节点。</p>
+<pre><code>document.createTextNode(data)
+</code></pre><p><strong>参数：</strong><br>data : 字符串值，可规定此节点的文本。</p>
+<p><strong>任务</strong><br>在代码编辑器<script>标签中，创建一个P标签，设置className属性，使用createTextNode创建文本节点”I love JavaScript!”。</p>
+<pre><code>&lt;style type=&quot;text/css&quot;&gt;
+
+.message{
+    width:200px;
+    height:100px;
+    background-color:#CCC;}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+var p = document.createElement(&quot;p&quot;);
+p.className=&quot;message&quot;;
+var txt = document.createTextNode(&quot;I love JavaScript!&quot;);
+p.appendChild(txt);
+document.body.appendChild(p);
+&lt;/script&gt;
+&lt;/body&gt;
+</code></pre><p>##插入节点appendChild()<br>在指定节点的最后一个子节点列表之后添加一个新的子节点。</p>
+<pre><code>appendChild(newnode)
+</code></pre><p><strong>参数:</strong><br>newnode：指定追加的节点。</p>
+<p><strong>任务：</strong><br>实现创建一个新li标签，内容为”php”,并将新创建的li插入<br>ul中。</p>
+<pre><code>&lt;ul id=&quot;test&quot;&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+&lt;/ul&gt; 
+&lt;script type=&quot;text/javascript&quot;&gt;
+//获取需要创建节点的元素
+  var otest = document.getElementById(&quot;test&quot;); 
+  //创建一个“li”元素
+  var newli = document.createElement(&quot;li&quot;);
+  //对新元素添加内容
+  newli.innerHTML=&quot;PHP&quot;;
+  //插入节点
+  otest.appendChild(newli);
+&lt;/script&gt; 
+</code></pre><p>运行结果：</p>
+<pre><code>JavaScript
+HTML
+PHP
+</code></pre><p>##插入节点insertBefore()</p>
+<p>insertBefore() 方法可在已有的子节点前插入一个新的子节点。</p>
+<pre><code>insertBefore(newnode,node);
+</code></pre><p>参数:<br>newnode: 要插入的新节点。<br>node: 指定此节点前插入节点。</p>
+<p>注意参数node可以写为otest//获取的节点.childNodes[1//插入的地方]</p>
+<p><strong>任务：</strong><br>实现创建一个新li标签，内容为”php”,并将新创建的li插入到内容为HTML的标签前。</p>
+<pre><code>&lt;ul id=&quot;test&quot;&gt;&lt;li&gt;JavaScript&lt;/li&gt;&lt;li&gt;HTML&lt;/li&gt;&lt;/ul&gt; 
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+  var otest = document.getElementById(&quot;test&quot;);
+  var newnode = document.createElement(&quot;li&quot;);
+  newnode.innerHTML=&quot;PHP&quot;;
+  otest.insertBefore(newnode,otest.childNodes[1]);
+&lt;/script&gt;
+</code></pre><p>运行结果</p>
+<pre><code>JavaScript
+PHP
+HTML
+</code></pre><p>##删除节点removeChild()</p>
+<p>removeChild() 方法从子节点列表中删除某个节点。如删除成功，此方法可返回被删除的节点，如失败，则返回 NULL。</p>
+<pre><code>nodeObject.removeChild(node)
+</code></pre><p><strong>参数:</strong><br>node ：必需，指定需要删除的节点。</p>
+<p><strong>任务</strong></p>
+<p>定义clearText()函数，完成节点内容的删除。</p>
+<ol>
+<li>删除该节点的内容，先要获取子节点。</li>
+<li>然后使用循环遍历每个子节点。</li>
+<li>使用removeChild()删除节点。</li>
+</ol>
+<p>代码如下</p>
+<pre><code>&lt;body&gt;
+&lt;div id=&quot;content&quot;&gt;
+  &lt;h1&gt;html&lt;/h1&gt;
+  &lt;h1&gt;php&lt;/h1&gt;
+  &lt;h1&gt;javascript&lt;/h1&gt;
+  &lt;h1&gt;jquery&lt;/h1&gt;
+  &lt;h1&gt;java&lt;/h1&gt;
+&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+function clearText() {
+  var content=document.getElementById(&quot;content&quot;);
+  // 在此完成该函数
+  var x=content.childNodes;
+  for(var i=0;i&lt;x.length;i++){
+//用判断清除空白符
+  if(x[i].nodeType==1){
+ var y=content.removeChild(x[i]);
+//获取删除的内容//节点删除后节点还存在内存中
+  document.write(&quot;删除的内容&quot;+y.innerHTML);
+//给y赋值null可完全删除对象
+  y=null;
+  }
+  }
+}
+&lt;/script&gt;
+&lt;button onclick=&quot;clearText()&quot;&gt;清除节点内容&lt;/button&gt;
+&lt;/body&gt;
+</code></pre><p>##替换元素节点replaceChild()</p>
+<p>replaceChild 实现子节点(对象)的替换。返回被替换对象的引用。</p>
+<pre><code>node.replaceChild (newnode,oldnew ) 
+</code></pre><p><strong>参数：</strong></p>
+<p>newnode : 必需，用于替换 oldnew 的对象。 </p>
+<p>oldnew : 必需，被 newnode 替换的对象。</p>
+<p><strong>注意: </strong></p>
+<ol>
+<li>当 oldnode 被替换时，所有与之相关的属性内容都将被移除。 </li>
+<li>newnode 必须先被建立。</li>
+<li>只有父结点才能调用  replaceChild(newnode,oldnode).这个方法，所以，要想替换当前结点的内容或者属性，那么首先得获得父节点，才可以操作</li>
+</ol>
+<p><strong>任务：</strong></p>
+<p>实现将 b 标签替换成 i 标签。</p>
+<pre><code> &lt;div&gt;&lt;b id=&quot;oldnode&quot;&gt;JavaScript&lt;/b&gt;是一个很常用的技术，为网页添加动态效果。&lt;/div&gt;
+  &lt;a href=&quot;javascript:replaceMessage()&quot;&gt; 将加粗改为斜体&lt;/a&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+  function replaceMessage(){
+  var newnode = document.createElement(&quot;i&quot;);
+  newnode.innerHTML=&quot;JavaScript&quot;;
+ var oldnode= document.getElementById(&quot;oldnode&quot;);
+           oldnode.parentNode.replaceChild(newnode,oldnode);
+   }
+  &lt;/script&gt;
+</code></pre></script></p>
+      
+    </div>
+    
+  </div>
+  
+    
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2017/02/03/古诗词背串/">
+                    古诗词背串
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2015/12/03/hello-world/">
+                    holler word
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"sublime text3 运行javascript　| 江海峰　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2017/02/03/古诗词背串/" title="上一篇: 古诗词背串">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2015/12/03/hello-world/" title="下一篇: holler word">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/02/20/HTML基础/">HTML基础笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/03/hexo部署blog/">hexo布置blog到git</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/03/sublime运行js/">sublime text3 运行javascript</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/03/古诗词背串/">古诗词背串</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/03/节点Node/">sublime text3 运行javascript</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/03/hello-world/">holler word</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2017 江海峰
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 1;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
